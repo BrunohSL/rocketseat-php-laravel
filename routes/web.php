@@ -1,6 +1,14 @@
 <?php
 
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProjectsController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [UserController::class, 'index']);
+Route::get(
+    '/',
+    [ProjectsController::class, 'index']
+)->name('projects.index');
+
+Route::get(
+    '/projects/{project}',
+    [ProjectsController::class, 'show']
+)->name('projects.show');
