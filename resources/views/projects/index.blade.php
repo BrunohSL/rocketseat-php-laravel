@@ -1,3 +1,3 @@
-<div>
+<x-layouts.app>
     <livewire:projects.index />
-</div>
+</x-layouts.app>

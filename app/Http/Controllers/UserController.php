@@ -8,26 +8,15 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        return view('welcome');
-    }
-
-    /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        // $user = User::query()->create([
-        //     'name' => 'Ennio',
-        //     'email' => 'teste6@teste.com',
-        //     'password' => 'root'
-        // ]);
-        $user = User::find(1);
-
-        dd($user->name);
+        return User::query()->create([
+            'name' => 'Ennio',
+            'email' => 'teste6@teste.com',
+            'password' => 'root'
+        ]);
     }
 
     /**
@@ -35,7 +24,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return User::find(1);
     }
 
     /**

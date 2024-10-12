@@ -9,6 +9,6 @@ Route::get(
 )->name('projects.index');
 
 Route::get(
-    '/projects/{project}',
+    '/project/{project}',
     [ProjectsController::class, 'show']
 )->name('projects.show');
